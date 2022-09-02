@@ -32,7 +32,6 @@ public class Printer implements Runnable {
                 System.out.println(String.format("[%s]: Printing '%s'...", getPrinterName(), job.getJobName()));
                 long sleepTime = job.getTimePrint() * MILLIS_PER_PAGE*job.getCountPage();
                 job.setTimeAll(sleepTime);
-                System.out.println(job.getTimePrint() + "timePrint");
                 System.out.println(String.format("[%s]: Waiting for print job", getPrinterName()));
                 Thread.sleep(sleepTime);
                 System.out.println(String.format("[%s]: '%s' ok.", getPrinterName(), job.getJobName()));

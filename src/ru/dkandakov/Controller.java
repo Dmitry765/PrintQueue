@@ -88,10 +88,8 @@ public class Controller implements Runnable {
                 }
                 else System.out.println("[OK]");
                 printJob = createPrintJob(type, countlist, namedocum);
-                System.out.println(String.format("#%s# Producing file '%s', number of pages %s.", getProducerName(), printJob.getJobName(), printJob.getNumberOfPages()));
                 queue.AddBck(printJob);
                 break;
-
         }
     }
 
