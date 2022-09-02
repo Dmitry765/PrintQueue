@@ -37,7 +37,6 @@ public class Printer implements Runnable {
                 Thread.sleep(sleepTime);
                 System.out.println(String.format("[%s]: '%s' ok.", getPrinterName(), job.getJobName()));
                 queuefinish.add(job);
-                System.out.println(job);
             }
             System.out.println(String.format("[%s]: Turn off", getPrinterName()));
         } catch (InterruptedException ignored) {

@@ -7,17 +7,12 @@ public abstract class PrintJob implements IWBS {
 
     public String jobName;
     public int NumberOfPages;
-    public String Size;
     public int TimePrint;
     private long timeAll;
 
     public String getJobName() {
         return this.jobName;
 
-    }
-
-    public String getSize() {
-        return this.Size;
     }
 
     public Integer getNumberOfPages() {

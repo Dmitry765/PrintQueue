@@ -33,8 +33,13 @@ public class CircularQueue implements Queue {
 
     @Override
     public void printRemove() {
-        if (!jobs.isEmpty())
-        jobs.remove(0) ;
+        synchronized (this) {
+            if (!jobs.isEmpty())
+                jobs.remove(0);
+            if (index > 0) {
+                index--;
+            }
+        }
     }
 
     @Override
