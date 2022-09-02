@@ -4,7 +4,7 @@ import ru.dkandakov.model.PrintJob;
 
 public interface Queue {
 
-    public void AddBck(PrintJob job) throws QueueException;
+    public void AddBck(PrintJob job) ;
 
     public PrintJob removeFront() throws InterruptedException;
 

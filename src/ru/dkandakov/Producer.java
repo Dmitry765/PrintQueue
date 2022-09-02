@@ -29,7 +29,7 @@ public class Producer implements Runnable {
     }
 
 
-    private void processCommand(final String command) throws QueueException {
+    private void processCommand(final String command)  {
         if (command == null || command.isEmpty()) return;
         switch (command) {
             case CommandConst.PRINT_REMOVE:
@@ -129,8 +129,6 @@ public class Producer implements Runnable {
            }
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } catch (QueueException e) {
-            throw new RuntimeException(e);
         }
     }
 
