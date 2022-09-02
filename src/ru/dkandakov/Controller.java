@@ -11,14 +11,14 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class Producer implements Runnable {
+public class Controller implements Runnable {
     public String name;
     public Queue queue;
     public Scanner scanner;
     PrintJob printJob;
     private boolean isCancel = false;
 
-    public Producer(String name, Queue queue) {
+    public Controller(String name, Queue queue) {
         this.queue = queue;
         this.name = name;
         this.scanner = new Scanner(System.in);

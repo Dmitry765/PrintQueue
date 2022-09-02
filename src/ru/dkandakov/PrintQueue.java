@@ -5,13 +5,13 @@ import ru.dkandakov.model.PrintJob;
 import java.util.ArrayList;
 
 
-public class CircularQueue implements Queue {
+public class PrintQueue implements Queue {
 
    public ArrayList<PrintJob> jobs = new ArrayList <>();
 
     public int index;
 
-    public CircularQueue() {
+    public PrintQueue() {
         this.index = 0;
     }
 
