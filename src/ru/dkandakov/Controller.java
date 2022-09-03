@@ -119,10 +119,10 @@ public class Controller implements Runnable {
     public void run() {
         try {
             while (!isCancel&&!Thread.currentThread().isInterrupted()) {
-               Thread.sleep(1);
+               Thread.sleep(10);
                 System.out.println("ENTER COMMAND:");
                 String valstr= scanner.nextLine();
-                System.out.println("yoe type " + valstr);
+                System.out.println("you type " + valstr);
                 processCommand(valstr);
            }
         } catch (InterruptedException e) {
